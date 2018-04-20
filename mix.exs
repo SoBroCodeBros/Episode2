@@ -33,14 +33,18 @@ defmodule DockerRocker.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0-rc"},
+      {:phoenix, "~> 1.3.2"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowlib, "~> 1.3.0", override: true},
+      {:cowboy, "~> 1.0"},
+      {:httpoison, "~> 1.0"},
+      {:poison, "~> 3.1"},
+      {:gun, "1.0.0-pre.1"},
     ]
   end
 
